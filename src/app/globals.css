@@ -1,26 +1,201 @@
 @import "tailwindcss";
 
+/*
+  Devotional Color Palette — Vibrant Edition
+  Bright, warm colors for large spaces.
+  Attractive, eye-catching tones for important content.
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --background: #FFFCF5;
+  --surface: #FFF7ED;
+  --card: #FFFFFF;
+
+  /* Text */
+  --foreground: #1E1710;
+  --muted-foreground: #6B5E4F;
+
+  /* Primary — Vivid Temple Gold */
+  --primary: #D49B0D;
+  --primary-light: #FFF6DC;
+  --primary-hover: #B8860B;
+  --primary-bright: #F0B429;
+
+  /* Devotion — Rich Crimson / Kumkum */
+  --devotion: #C0392B;
+  --devotion-light: #FDE8E6;
+  --devotion-hover: #A33025;
+  --devotion-bright: #E74C3C;
+
+  /* Sage — Fresh Emerald Green */
+  --sage: #27AE60;
+  --sage-light: #E8F8EF;
+  --sage-hover: #1E8E4E;
+
+  /* Amber — Bright Turmeric / Warm Orange */
+  --amber: #E67E22;
+  --amber-light: #FFF2E0;
+  --amber-bright: #F39C12;
+
+  /* Saffron — Vibrant Deep Saffron */
+  --saffron: #E8750A;
+  --saffron-light: #FFF0E0;
+
+  /* Sandalwood — Warm Gold Neutral */
+  --sandalwood: #D4B87A;
+  --sandalwood-light: #FBF5E8;
+
+  /* Borders & Ring */
+  --border: #EBE1D2;
+  --border-light: #F3ECE0;
+  --ring: #D49B0D;
+
+  --radius: 0.625rem;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
   --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-bright: var(--primary-bright);
+  --color-devotion: var(--devotion);
+  --color-devotion-light: var(--devotion-light);
+  --color-devotion-hover: var(--devotion-hover);
+  --color-devotion-bright: var(--devotion-bright);
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-sage-hover: var(--sage-hover);
+  --color-amber: var(--amber);
+  --color-amber-light: var(--amber-light);
+  --color-amber-bright: var(--amber-bright);
+  --color-saffron: var(--saffron);
+  --color-saffron-light: var(--saffron-light);
+  --color-sandalwood: var(--sandalwood);
+  --color-sandalwood-light: var(--sandalwood-light);
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: "Georgia", "Cambria", "Times New Roman", serif;
+  --radius: 0.625rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* ——— Bright Gradients for Large Spaces ——— */
+
+.gradient-sacred {
+  background: linear-gradient(135deg, #E8750A 0%, #D49B0D 40%, #C0392B 100%);
+}
+
+.gradient-warm {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFF0D4 40%, #FFE8CC 100%);
+}
+
+.gradient-golden {
+  background: linear-gradient(135deg, #F0B429 0%, #D49B0D 50%, #E67E22 100%);
+}
+
+.gradient-devotion {
+  background: linear-gradient(135deg, #C0392B 0%, #8B3A4A 60%, #6B2D3E 100%);
+}
+
+.gradient-sunrise {
+  background: linear-gradient(180deg, #FFF7ED 0%, #FFECD2 30%, #FFD8A8 60%, #FFB347 100%);
+}
+
+.gradient-temple {
+  background: linear-gradient(135deg, #FAF0DC 0%, #FDE8C8 50%, #FCE0B0 100%);
+}
+
+/* Product placeholder with vivid warmth */
+.product-image-placeholder {
+  background: linear-gradient(135deg, #FFECD2 0%, #FFD8A8 40%, #FFF0D4 70%, #FCE0B0 100%);
+}
+
+/* ——— Animations ——— */
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gentle-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(212, 155, 13, 0.25); }
+  50% { box-shadow: 0 0 28px rgba(240, 180, 41, 0.5); }
+}
+
+@keyframes diya-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.82; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.7s ease-out forwards;
+}
+
+.animate-gentle-glow {
+  animation: gentle-glow 2.5s ease-in-out infinite;
+}
+
+.animate-diya {
+  animation: diya-flicker 2s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Marquee for credential ticker */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--sandalwood); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
