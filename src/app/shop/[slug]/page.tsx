@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Check, Sparkles, ChevronRight } from "lucide-react";
 import { products } from "@/lib/data/products";
@@ -13,11 +13,11 @@ import { Badge } from "@/components/ui/badge";
 import type { Product } from "@/lib/types";
 
 interface ProductPageProps {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
-  const { slug } = use(params);
+  const { slug } = params;
   const product = products.find((p) => p.slug === slug);
   const addItem = useCartStore((s) => s.addItem);
   const [addedToCart, setAddedToCart] = useState(false);
@@ -55,12 +55,12 @@ export default function ProductPage({ params }: ProductPageProps) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* Left: Image */}
-          <div className="animate-fade-in">
+          <div className="animate-fade-in lg:sticky lg:top-24">
             <div className="relative rounded-2xl overflow-hidden border-2 border-primary-bright/50 shadow-lg">
               <div
-                className="product-image-placeholder aspect-4/5 w-full"
+                className="product-image-placeholder w-full min-h-[420px] sm:min-h-[520px] lg:min-h-[600px]"
                 aria-hidden
               />
               {product.badge && (
