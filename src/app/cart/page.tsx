@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShoppingBag,
   Minus,
@@ -56,7 +57,14 @@ export default function CartPage() {
               {items.map((item, index) => (
                 <div key={item.product.slug}>
                   <article className="flex flex-col sm:flex-row gap-4 sm:gap-6 py-6">
-                    <div className="product-image-placeholder shrink-0 w-full sm:w-32 aspect-square rounded-lg" />
+                    <div className="relative shrink-0 w-full sm:w-32 aspect-square rounded-lg overflow-hidden bg-surface">
+                      <Image
+                        src={item.product.images[0]}
+                        alt={item.product.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="flex-1 min-w-0">
                       {item.product.badge && (
                         <Badge

@@ -225,7 +225,14 @@ export default function Home() {
                 className="overflow-hidden bg-card shadow-lg hover:shadow-xl transition-shadow animate-fade-in border-0"
                 style={{ animationDelay: `${i * 100}ms` }}
               >
-                <div className="product-image-placeholder w-full h-[300px] rounded-t-lg" />
+                <div className="relative w-full h-[300px] bg-surface overflow-hidden rounded-t-lg">
+                  <Image
+                    src={product.images[0]}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <CardHeader>
                   <Badge variant="bright" className="w-fit mb-2">
                     {product.badge}
