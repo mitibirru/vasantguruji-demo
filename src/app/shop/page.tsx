@@ -21,7 +21,7 @@ export default function ShopPage() {
         <div className="absolute inset-0 gradient-golden opacity-90" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end pt-16 pb-12 sm:pt-20 sm:pb-16">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end pt-16 pb-12 sm:pt-20 sm:pb-16 lg:px-20">
             <div className="text-center lg:text-left z-10 animate-fade-in pb-4">
               <Badge variant="bright" className="mb-5 px-4 py-1.5 text-sm shadow-lg">
                 <Sparkles className="w-3.5 h-3.5 mr-1.5" />
@@ -37,10 +37,10 @@ export default function ShopPage() {
             </div>
             <div className="relative hidden lg:block w-[220px] h-[280px] animate-slide-up">
               <Image
-                src="/guruji.png"
+                src="/guruji.jpeg"
                 alt="Param Pujya Gurudev in prayer"
                 fill
-                className="object-contain object-bottom mix-blend-lighten drop-shadow-2xl"
+                className="object-contain object-bottom mix-blend-lighten drop-shadow-2xl rounded-3xl"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-bright/20 via-transparent to-transparent" />
@@ -63,10 +63,14 @@ export default function ShopPage() {
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 <div className="relative">
-                  <div
-                    className="product-image-placeholder aspect-[4/5] w-full"
-                    aria-hidden
-                  />
+                  <div className="relative aspect-[4/5] w-full bg-surface overflow-hidden">
+                    <Image
+                      src={product.images[0]}
+                      alt={product.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                   {product.badge && (
                     <Badge
                       variant="bright"
@@ -107,15 +111,6 @@ export default function ShopPage() {
         className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-20 gradient-temple overflow-hidden"
         aria-label="Trust & authenticity"
       >
-        <div className="absolute left-0 top-0 bottom-0 w-48 opacity-[0.08] hidden lg:block">
-          <Image
-            src="/guruji.png"
-            alt=""
-            fill
-            className="object-contain object-left-bottom"
-            aria-hidden="true"
-          />
-        </div>
         <div className="relative mx-auto max-w-4xl z-10">
           <div className="flex flex-col items-center text-center animate-slide-up">
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6">

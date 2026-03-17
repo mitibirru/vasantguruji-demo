@@ -8,9 +8,7 @@ export const products: Product[] = [
     price: 5100,
     currency: "INR",
     images: [
-      "/products/kalash-1.jpg",
-      "/products/kalash-2.jpg",
-      "/products/kalash-3.jpg",
+      "/kalash-murti.PNG",
     ],
     story:
       "This sacred Kalash has been consecrated through the divine grace of Param Pujya Gurudev Vasant Vijay Ji Maharaj, carrying forward a tradition rooted in his 25 years of intensive mantra sadhana across the Himalayan hills, Vindhyachal forests, and the sacred banks of the Ganges. Each Kalash is filled with 370 super divine items — including rare Himalayan herbs, the sacred Navratnas (nine precious gems), healing gemstones, Siddha Yantras, and divine Kumkum blessed with over 10 million mantra chants.",
@@ -42,9 +40,7 @@ export const products: Product[] = [
     price: 3100,
     currency: "INR",
     images: [
-      "/products/bhairav-1.jpg",
-      "/products/bhairav-2.jpg",
-      "/products/bhairav-3.jpg",
+      "/bhairav-murti.jpeg",
     ],
     story:
       "Param Pujya Gurudev holds an Exclusive World Record for installing a massive 31-foot idol of Nakoda Bhairav Ji alongside a Mahabhog offering of 2,021 distinct spiritual and holistic items. Continuing this sacred tradition, these Murtis are crafted directly from the holy soil of the Ganges in Kashi (Banaras), the very soil sanctified by millennia of spiritual practice. Gurudev previously organized the creation of 108,000 such Bhairav idols, each carrying the spiritual potency of this ancient land.",

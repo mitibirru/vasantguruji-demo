@@ -118,10 +118,10 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-primary-bright/30 via-transparent to-transparent z-10" />
                 <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary-bright/20 via-transparent to-saffron/20 blur-2xl" />
                 <Image
-                  src="/guruji.png"
+                  src="/guruji.jpeg"
                   alt="Param Pujya Gurudev Vasant Vijay Ji Maharaj in prayer"
                   fill
-                  className="object-contain object-bottom drop-shadow-2xl rounded-2xl mix-blend-lighten"
+                  className="object-contain object-bottom drop-shadow-2xl rounded-3xl mix-blend-lighten"
                   priority
                 />
               </div>
@@ -347,15 +347,6 @@ export default function Home() {
         className="relative py-24 sm:py-28 px-4 sm:px-6 lg:px-8 gradient-devotion overflow-hidden"
         aria-label="Support the Mission"
       >
-        <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 hidden lg:block">
-          <Image
-            src="/guruji.png"
-            alt=""
-            fill
-            className="object-contain object-right-bottom mix-blend-lighten"
-            aria-hidden="true"
-          />
-        </div>
         <div className="relative mx-auto max-w-2xl text-center z-10">
           <Heart className="w-16 h-16 mx-auto text-white/95 mb-8" />
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mb-6 drop-shadow-md">

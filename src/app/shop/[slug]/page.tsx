@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Check, Sparkles, ChevronRight } from "lucide-react";
 import { products } from "@/lib/data/products";
 import { mantras } from "@/lib/data/mantras";
@@ -59,10 +60,15 @@ export default function ProductPage({ params }: ProductPageProps) {
           {/* Left: Image */}
           <div className="animate-fade-in lg:sticky lg:top-24">
             <div className="relative rounded-2xl overflow-hidden border-2 border-primary-bright/50 shadow-lg">
-              <div
-                className="product-image-placeholder w-full min-h-[420px] sm:min-h-[520px] lg:min-h-[600px]"
-                aria-hidden
-              />
+              <div className="relative w-full min-h-[420px] sm:min-h-[520px] lg:min-h-[600px] bg-surface">
+                <Image
+                  src={product.images[0]}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
               {product.badge && (
                 <Badge
                   variant="bright"
